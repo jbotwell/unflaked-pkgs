@@ -19,13 +19,19 @@
 
       chromeDevtoolsAxiSrc = builtins.fetchGit {
         url = "https://github.com/kunchenguid/chrome-devtools-axi";
-        rev = "c28cfaebc5d8ed6c93d4d2cd6bcbdc1464298fbf";
+        rev = "aa393d57ad59552bb29e39d4d12121d6978640fa";
         ref = "main";
       };
 
       ghAxiSrc = builtins.fetchGit {
         url = "https://github.com/kunchenguid/gh-axi";
-        rev = "c1839046e9627dbbd13ce28c508b7a2c6b6c5cda";
+        rev = "52319904175b45816f6a525c8a5a279872babfcc";
+        ref = "main";
+      };
+
+      ouroborosSrc = builtins.fetchGit {
+        url = "https://github.com/Q00/ouroboros";
+        rev = "7022117f7584c750b35b2f33c632fe5a744d3ee8";
         ref = "main";
       };
     in
@@ -48,6 +54,7 @@
             chub = pkgs.callPackage ./pkgs/context-hub { src = contextHubSrc; };
             chrome-devtools-axi = pkgs.callPackage ./pkgs/chrome-devtools-axi { src = chromeDevtoolsAxiSrc; };
             gh-axi = pkgs.callPackage ./pkgs/gh-axi { src = ghAxiSrc; };
+            ouroboros = pkgs.callPackage ./pkgs/ouroboros { src = ouroborosSrc; };
           };
 
           devShells.default = pkgs.mkShell {

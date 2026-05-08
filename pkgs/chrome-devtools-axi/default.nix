@@ -7,11 +7,11 @@
 
 buildNpmPackage {
   pname = "chrome-devtools-axi";
-  version = "0.1.18";
+  version = "0.1.21";
 
   inherit src;
 
-  npmDepsHash = "sha256-DGfwEj9xqqFmjhbwY1aHjX8Cpthf9ojAikkqls8G2fs=";
+  npmDepsHash = "sha256-cSHllVEl08mqENOHBo2bmisTYwD9owBLEuUT+ceUZrw=";
 
   nativeBuildInputs = [ nodejs_22 ];
 
