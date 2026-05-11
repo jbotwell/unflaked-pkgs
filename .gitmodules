@@ -7,3 +7,6 @@
 [submodule "vendor/chrome-devtools-axi"]
 	path = vendor/chrome-devtools-axi
 	url = https://github.com/kunchenguid/chrome-devtools-axi
+[submodule "vendor/ouroboros"]
+	path = vendor/ouroboros
+	url = https://github.com/Q00/ouroboros
