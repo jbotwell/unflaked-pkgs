@@ -7,11 +7,11 @@
 
 buildNpmPackage {
   pname = "gh-axi";
-  version = "0.1.15";
+  version = "0.1.16";
 
   inherit src;
 
-  npmDepsHash = "sha256-4GSlB0poZot8FC9zkMi34Z1fWX8h2d2/YU04tqpEmKU=";
+  npmDepsHash = "sha256-Lahq+MPOoRYmbyMYVPZqzEPLQ04+L5hOd7+xli5MVxw=";
 
   nativeBuildInputs = [ nodejs_22 ];
 

@@ -25,13 +25,13 @@
 
       ghAxiSrc = builtins.fetchGit {
         url = "https://github.com/kunchenguid/gh-axi";
-        rev = "52319904175b45816f6a525c8a5a279872babfcc";
+        rev = "151d26c914165c4928c9909740d2ed32517f7ef4";
         ref = "main";
       };
 
       ouroborosSrc = builtins.fetchGit {
         url = "https://github.com/Q00/ouroboros";
-        rev = "7022117f7584c750b35b2f33c632fe5a744d3ee8";
+        rev = "231026cc1db8220a0b53551b5d312ac8f3cdfc01";
         ref = "main";
       };
     in

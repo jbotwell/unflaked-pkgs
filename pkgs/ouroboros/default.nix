@@ -9,7 +9,7 @@ let
 in
 python.pkgs.buildPythonApplication rec {
   pname = "ouroboros-ai";
-  version = "0.9.6";
+  version = "0.37.0";
   pyproject = true;
 
   inherit src;
@@ -20,12 +20,15 @@ python.pkgs.buildPythonApplication rec {
     aiosqlite
     anyio
     jsonschema
+    mcp
     pydantic
+    questionary
     prompt-toolkit
     pyyaml
     rich
     sqlalchemy
     structlog
+    textual
     typer
   ];
 
