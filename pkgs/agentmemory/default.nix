@@ -1,8 +1,10 @@
 {
   lib,
   buildNpmPackage,
+  makeWrapper,
   nodejs_22,
   runCommand,
+  iii,
   src,
 }:
 
@@ -28,7 +30,10 @@ buildNpmPackage {
   ];
   dontNpmRebuild = true;
 
-  nativeBuildInputs = [ nodejs_22 ];
+  nativeBuildInputs = [
+    nodejs_22
+    makeWrapper
+  ];
 
   buildPhase = ''
     runHook preBuild
@@ -46,6 +51,7 @@ buildNpmPackage {
     import("$out/lib/agentmemory/dist/cli.mjs");
     EOF
     chmod +x $out/bin/agentmemory
+    wrapProgram $out/bin/agentmemory --prefix PATH : ${lib.makeBinPath [ iii ]}
     runHook postInstall
   '';
 
