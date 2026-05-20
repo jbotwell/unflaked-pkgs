@@ -73,6 +73,10 @@
               src = agentmemorySrc;
               iii = pkgs.callPackage ./pkgs/iii { };
             };
+            agentmemory-hermes-plugin = pkgs.runCommand "agentmemory-hermes-plugin" { } ''
+              mkdir -p $out
+              cp -r ${agentmemorySrc}/integrations/hermes/* $out/
+            '';
           };
 
           devShells.default = pkgs.mkShell {
