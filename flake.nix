@@ -19,19 +19,19 @@
 
       chromeDevtoolsAxiSrc = builtins.fetchGit {
         url = "https://github.com/kunchenguid/chrome-devtools-axi";
-        rev = "aa393d57ad59552bb29e39d4d12121d6978640fa";
+        rev = "5213f460c1c3c52b7dee3314a525fdf933c767a2";
         ref = "main";
       };
 
       ghAxiSrc = builtins.fetchGit {
         url = "https://github.com/kunchenguid/gh-axi";
-        rev = "151d26c914165c4928c9909740d2ed32517f7ef4";
+        rev = "8b14bcb08d9378e2390872eb6023701af4c8e42d";
         ref = "main";
       };
 
       ouroborosSrc = builtins.fetchGit {
         url = "https://github.com/Q00/ouroboros";
-        rev = "231026cc1db8220a0b53551b5d312ac8f3cdfc01";
+        rev = "2014af0cbce27d88c290347513dee770c8bf2f44";
         ref = "main";
       };
     in

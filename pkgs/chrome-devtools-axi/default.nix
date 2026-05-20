@@ -2,16 +2,24 @@
   lib,
   buildNpmPackage,
   nodejs_22,
+  runCommand,
   src,
 }:
 
+let
+  srcWithLockfile = runCommand "chrome-devtools-axi-src" { } ''
+    cp -r ${src} $out
+    chmod -R u+w $out
+    cp ${./package-lock.json} $out/package-lock.json
+  '';
+in
 buildNpmPackage {
   pname = "chrome-devtools-axi";
-  version = "0.1.21";
+  version = "0.1.22";
 
-  inherit src;
+  src = srcWithLockfile;
 
-  npmDepsHash = "sha256-cSHllVEl08mqENOHBo2bmisTYwD9owBLEuUT+ceUZrw=";
+  npmDepsHash = "sha256-cQr6p49XhbaLyVlqGWlHzUhLDbR1JHeWrzBfnKXJkvw=";
 
   nativeBuildInputs = [ nodejs_22 ];
 
