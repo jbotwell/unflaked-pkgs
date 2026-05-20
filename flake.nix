@@ -68,7 +68,11 @@
             gh-axi = pkgs.callPackage ./pkgs/gh-axi { src = ghAxiSrc; };
             ouroboros = pkgs.callPackage ./pkgs/ouroboros { src = ouroborosSrc; };
             codegraph = pkgs.callPackage ./pkgs/codegraph { src = codegraphSrc; };
-            agentmemory = pkgs.callPackage ./pkgs/agentmemory { src = agentmemorySrc; };
+            iii = pkgs.callPackage ./pkgs/iii { };
+            agentmemory = pkgs.callPackage ./pkgs/agentmemory {
+              src = agentmemorySrc;
+              iii = pkgs.callPackage ./pkgs/iii { };
+            };
           };
 
           devShells.default = pkgs.mkShell {
