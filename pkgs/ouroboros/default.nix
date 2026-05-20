@@ -9,7 +9,7 @@ let
 in
 python.pkgs.buildPythonApplication rec {
   pname = "ouroboros-ai";
-  version = "0.37.0";
+  version = "0.39.0";
   pyproject = true;
 
   inherit src;

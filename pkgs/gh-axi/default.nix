@@ -2,16 +2,24 @@
   lib,
   buildNpmPackage,
   nodejs_22,
+  runCommand,
   src,
 }:
 
+let
+  srcWithLockfile = runCommand "gh-axi-src" { } ''
+    cp -r ${src} $out
+    chmod -R u+w $out
+    cp ${./package-lock.json} $out/package-lock.json
+  '';
+in
 buildNpmPackage {
   pname = "gh-axi";
-  version = "0.1.16";
+  version = "0.1.18";
 
-  inherit src;
+  src = srcWithLockfile;
 
-  npmDepsHash = "sha256-Lahq+MPOoRYmbyMYVPZqzEPLQ04+L5hOd7+xli5MVxw=";
+  npmDepsHash = "sha256-5kAfNJQeAF8523BWs+rimJ8WtzSZnsnX+w5hyNHtimU=";
 
   nativeBuildInputs = [ nodejs_22 ];
 
