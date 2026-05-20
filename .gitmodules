@@ -10,3 +10,9 @@
 [submodule "vendor/ouroboros"]
 	path = vendor/ouroboros
 	url = https://github.com/Q00/ouroboros
+[submodule "vendor/codegraph"]
+	path = vendor/codegraph
+	url = https://github.com/colbymchenry/codegraph
+[submodule "vendor/agentmemory"]
+	path = vendor/agentmemory
+	url = https://github.com/rohitg00/agentmemory

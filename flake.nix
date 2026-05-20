@@ -34,6 +34,18 @@
         rev = "2014af0cbce27d88c290347513dee770c8bf2f44";
         ref = "main";
       };
+
+      codegraphSrc = builtins.fetchGit {
+        url = "https://github.com/colbymchenry/codegraph";
+        rev = "3cf3f2150cdb2daad3f111440977fcdb2d8bfa74";
+        ref = "main";
+      };
+
+      agentmemorySrc = builtins.fetchGit {
+        url = "https://github.com/rohitg00/agentmemory";
+        rev = "1838f4d74c3a0accdd3764e7a8ec155cc140b831";
+        ref = "main";
+      };
     in
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [ inputs.treefmt-nix.flakeModule ];
@@ -55,6 +67,8 @@
             chrome-devtools-axi = pkgs.callPackage ./pkgs/chrome-devtools-axi { src = chromeDevtoolsAxiSrc; };
             gh-axi = pkgs.callPackage ./pkgs/gh-axi { src = ghAxiSrc; };
             ouroboros = pkgs.callPackage ./pkgs/ouroboros { src = ouroborosSrc; };
+            codegraph = pkgs.callPackage ./pkgs/codegraph { src = codegraphSrc; };
+            agentmemory = pkgs.callPackage ./pkgs/agentmemory { src = agentmemorySrc; };
           };
 
           devShells.default = pkgs.mkShell {
