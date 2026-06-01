@@ -15,11 +15,11 @@ let
 in
 buildNpmPackage {
   pname = "chrome-devtools-axi";
-  version = "0.1.22";
+  version = "0.1.23";
 
   src = srcWithLockfile;
 
-  npmDepsHash = "sha256-cQr6p49XhbaLyVlqGWlHzUhLDbR1JHeWrzBfnKXJkvw=";
+  npmDepsHash = "sha256-9oDHccTbTbqZ80Qeh1mJ0YXmpF3msWWaCeNr3VQLfMw=";
 
   nativeBuildInputs = [ nodejs_22 ];
 

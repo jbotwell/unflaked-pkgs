@@ -17,11 +17,11 @@ let
 in
 buildNpmPackage {
   pname = "agentmemory";
-  version = "0.9.21";
+  version = "0.9.24";
 
   src = srcWithLockfile;
 
-  npmDepsHash = "sha256-XyEY7Par1atqeEGtzaiW271ARMhOTx3DpYGVTMB3UWw=";
+  npmDepsHash = "sha256-yG+9azr0YgwzUsjX3gk7vMV+7ROqP3wNkuk0F/NFJt4=";
 
   makeCacheWritable = true;
   npmFlags = [

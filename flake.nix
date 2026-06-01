@@ -19,31 +19,31 @@
 
       chromeDevtoolsAxiSrc = builtins.fetchGit {
         url = "https://github.com/kunchenguid/chrome-devtools-axi";
-        rev = "5213f460c1c3c52b7dee3314a525fdf933c767a2";
+        rev = "bd57084053e561a5d718db18c80489dcd81d3f2a";
         ref = "main";
       };
 
       ghAxiSrc = builtins.fetchGit {
         url = "https://github.com/kunchenguid/gh-axi";
-        rev = "8b14bcb08d9378e2390872eb6023701af4c8e42d";
+        rev = "88610533c3309b7fe67fa2cef08646a5de027aae";
         ref = "main";
       };
 
       ouroborosSrc = builtins.fetchGit {
         url = "https://github.com/Q00/ouroboros";
-        rev = "2014af0cbce27d88c290347513dee770c8bf2f44";
+        rev = "3e382a3bff28e59bbfd04bbddde64bbf8398b6cd";
         ref = "main";
       };
 
       codegraphSrc = builtins.fetchGit {
         url = "https://github.com/colbymchenry/codegraph";
-        rev = "3cf3f2150cdb2daad3f111440977fcdb2d8bfa74";
+        rev = "8629f7ab4cf09c7542a86166a9ca9e22ac52acb7";
         ref = "main";
       };
 
       agentmemorySrc = builtins.fetchGit {
         url = "https://github.com/rohitg00/agentmemory";
-        rev = "1838f4d74c3a0accdd3764e7a8ec155cc140b831";
+        rev = "fd9e3bd42d6208a33f0ee9de1442fdbb60eab106";
         ref = "main";
       };
     in

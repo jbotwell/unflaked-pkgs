@@ -15,11 +15,11 @@ let
 in
 buildNpmPackage {
   pname = "gh-axi";
-  version = "0.1.18";
+  version = "0.1.19";
 
   src = srcWithLockfile;
 
-  npmDepsHash = "sha256-5kAfNJQeAF8523BWs+rimJ8WtzSZnsnX+w5hyNHtimU=";
+  npmDepsHash = "sha256-Bkktn/iaazpno/ZUCO+M3pmvURtHZXM7P9r6FEd9rnQ=";
 
   nativeBuildInputs = [ nodejs_22 ];
 
