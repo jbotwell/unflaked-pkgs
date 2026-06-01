@@ -7,11 +7,11 @@
 
 buildNpmPackage {
   pname = "codegraph";
-  version = "0.7.12";
+  version = "0.9.8";
 
   inherit src;
 
-  npmDepsHash = "sha256-TmrRrU26sKtnOqU3+6tJem2VKuQlbrvIux1tPUxjo0s=";
+  npmDepsHash = "sha256-xNMl8aWbRicefSR1vXozGk5to+GXh/ihFK2V+HNfPdw=";
 
   nativeBuildInputs = [ nodejs_22 ];
 

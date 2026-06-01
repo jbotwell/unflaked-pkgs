@@ -7,11 +7,11 @@
 
 stdenv.mkDerivation rec {
   pname = "iii";
-  version = "0.11.2";
+  version = "0.16.1";
 
   src = fetchurl {
     url = "https://github.com/iii-hq/iii/releases/download/iii%2Fv${version}/iii-x86_64-unknown-linux-gnu.tar.gz";
-    hash = "sha256-nIPEd4i070vutl3ZvzfpT5k3cM09uHRGTDzhzckjUs0=";
+    hash = "sha256-5QmcmsnKUapZfsOpk2z3o2SQJvmwB4HXeod4Q5AiQWs=";
   };
 
   sourceRoot = ".";
