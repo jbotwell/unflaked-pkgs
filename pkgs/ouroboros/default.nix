@@ -21,6 +21,7 @@ python.pkgs.buildPythonApplication rec {
     anyio
     click
     jsonschema
+    mcp
     pydantic
     questionary
     prompt-toolkit
