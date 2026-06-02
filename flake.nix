@@ -70,7 +70,6 @@
             codegraph = pkgs.callPackage ./pkgs/codegraph { src = codegraphSrc; };
             agentmemory = pkgs.callPackage ./pkgs/agentmemory {
               src = agentmemorySrc;
-              iii = pkgs.callPackage ./pkgs/iii { };
             };
             agentmemory-hermes-plugin = pkgs.runCommand "agentmemory-hermes-plugin" { } ''
               mkdir -p $out

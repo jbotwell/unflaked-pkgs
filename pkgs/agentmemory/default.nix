@@ -4,11 +4,40 @@
   makeWrapper,
   nodejs_22,
   runCommand,
-  iii,
+  stdenv,
+  fetchurl,
+  autoPatchelfHook,
   src,
 }:
 
 let
+  # iii is pinned to the version required by agentmemory.
+  # Do NOT bump independently — upgrade only when agentmemory's hard-pin changes.
+  iiiVersion = "0.11.2";
+  iiiHash = "sha256-nIPEd4i070vutl3ZvzfpT5k3cM09uHRGTDzhzckjUs0=";
+
+  iii =
+    (stdenv.mkDerivation rec {
+      pname = "iii";
+      version = iiiVersion;
+
+      src = fetchurl {
+        url = "https://github.com/iii-hq/iii/releases/download/iii%2Fv${version}/iii-x86_64-unknown-linux-gnu.tar.gz";
+        hash = iiiHash;
+      };
+
+      sourceRoot = ".";
+
+      nativeBuildInputs = [ autoPatchelfHook ];
+      buildInputs = [ stdenv.cc.cc.lib ];
+
+      installPhase = ''
+        runHook preInstall
+        install -Dm755 iii $out/bin/iii
+        runHook postInstall
+      '';
+    });
+
   srcWithLockfile = runCommand "agentmemory-src" { } ''
     cp -r ${src} $out
     chmod -R u+w $out
